@@ -122,6 +122,70 @@ body {
     }
 }
 
+/* ---------- Tabs and Accordion ---------- */
+.tabs__accordion {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .tabs__accordion__container {
+        padding: 0 1rem;
+
+        .tabs_accordion__nav  {
+            display: none;
+        }
+
+        .tabs__accordion__content {
+
+            .tabs__accordion__card {
+                margin-bottom: 1.5rem;
+
+                &.active {
+                    display: block;
+                }
+
+                .tabs__accordion__header {
+                    background-color: #252525;
+                    display: block;
+                    padding: 1.5rem;
+                    color: #ffffff;
+                    display: flex;
+                    align-items: center;
+                    
+                    .tabs__accordion__icon {
+                        margin-left: auto;
+                    }
+                }
+
+                .tabs__accordion__body {
+                    display: block;
+                    visibility: visible;
+                    opacity: 1;
+                    padding: 1rem;
+                    background-color: #eeeeee;
+                    max-height: 100%;
+                    transition: all 300ms ease-in-out;
+
+                    &:not(.active) {
+                        max-height: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    p {
+                        margin-bottom: 1rem;
+                    }
+
+                    ul {
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 1024px) {
 
     /* ---------- Content ---------- */
@@ -190,6 +254,71 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+        }
+    }
+
+    /* ---------- Tabs and Accordion ---------- */
+    .tabs__accordion {
+        
+        .tabs__accordion__container {
+
+            .tabs_accordion__nav  {
+                display: flex;
+                font-size: 14px;
+                font-weight: 500;
+
+                .tabs__accordion__item {
+                    background-color: #4a4a4a;
+                    color: #ffffff;
+                    display: inline-block;
+                    padding: 1rem;
+                    width: 100%;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &.active, &:hover {
+                        background-color: #252525;
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 0.5rem;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 0.5rem;
+                    }
+                }
+            }
+
+            .tabs__accordion__content {
+
+                .tabs__accordion__card {
+                    margin-bottom: 0;
+
+                    .tabs__accordion__header {
+                        display: none;
+                    }
+
+                    .tabs__accordion__body {
+                        padding: 2rem 1rem;
+                        display: none;
+                        border-bottom-left-radius: 0.5rem;
+                        border-bottom-right-radius: 0.5rem;
+
+                        &.active {
+                            display: block!important;
+                        }
+
+                        p {
+                            margin-bottom: 1rem;
+                        }
+
+                        ul {
+                            margin: 1rem 0;
+                        }
+                    }
+                }
             }
         }
     }

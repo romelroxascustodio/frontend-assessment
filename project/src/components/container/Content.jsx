@@ -27,7 +27,7 @@ export default function Content() {
                   </div>
                   <div className="content__body">{data.text}</div>
                   <div className="content__footer">
-                    <a href="" className='content__button'>Read More</a>
+                    <a href="/" className='content__button'>Read More</a>
                   </div>
                 </div>
               </div>
