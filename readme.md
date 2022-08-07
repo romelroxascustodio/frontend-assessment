@@ -12,4 +12,4 @@ npm start
 # Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
 the value of + + 'a' convert to (+ 'a') and display NaN stands for "Not a number"
-and toLowerCase() function convert all the word to lowercase so from baNaNa to banana
+and toLowerCase() function convert all the letter to lowercase so from baNaNa to banana
