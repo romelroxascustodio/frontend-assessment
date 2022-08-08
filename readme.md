@@ -1,8 +1,7 @@
 I replace the image due to provided placeholder image link is broken.
 
-cd project
-npm install
-npm start
+# npm install
+# npm start
 
 # you can see the following:
 
